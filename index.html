@@ -5,103 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Планы этажей бутик-отеля</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f0f0f0;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        .floor-plan {
-            margin: 20px 0;
-            border: 1px solid #ccc;
-            padding: 10px;
-            background-color: #fff;
-        }
-        svg {
-            display: block;
-            margin: 0 auto;
-        }
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f0f0f0; }
+        h1, h2 { color: #333; }
+        .floor-plan { margin: 20px 0; border: 1px solid #ccc; padding: 10px; background-color: #fff; }
+        svg { display: block; margin: 0 auto; }
+        text { font-size: 5px; fill: #333; }
     </style>
 </head>
 <body>
     <h1>Планы этажей бутик-отеля</h1>
-
     <div class="floor-plan">
         <h2>План 1-го этажа</h2>
-        <svg width="200" height="150" xmlns="http://www.w3.org/2000/svg">
+        <svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
             <!-- Основной контур здания (12,24 м x 13,3 м) -->
             <rect x="0" y="0" width="122.4" height="133" fill="none" stroke="black" stroke-width="1"/>
             
             <!-- Лестничный блок (7,3 м x 3,4 м) -->
             <rect x="0" y="0" width="73" height="34" fill="gray" stroke="black" stroke-width="1"/>
-            <text x="5" y="15" font-size="5">Лестница</text>
+            <text x="5" y="15">Лестница</text>
             
-            <!-- Номер 1 (2,04 м x 12,3 м, с окном 2,23 м) -->
-            <rect x="91.6" y="0" width="20.4" height="123" fill="lightblue" stroke="black" stroke-width="1"/>
-            <text x="92" y="15" font-size="5">Номер 1</text>
-            <rect x="91.6" y="0" width="22.3" height="5" fill="none" stroke="red" stroke-width="1"/>
+            <!-- Номер 1 (3 м x 9 м + туалет/душ 1,5 м x 2 м) -->
+            <rect x="73" y="0" width="30" height="90" fill="lightblue" stroke="black" stroke-width="1"/>
+            <text x="75" y="15">Номер 1</text>
+            <rect x="73" y="0" width="22.3" height="5" fill="none" stroke="red" stroke-width="1"/> <!-- Окно -->
+            <rect x="73" y="70" width="15" height="20" fill="lightpink" stroke="black" stroke-width="1"/> <!-- Туалет/Душ -->
+            <text x="75" y="80">Т/Д 1</text>
             
-            <!-- Номер 2 (2,04 м x 12,3 м, с окном 2,23 м) -->
-            <rect x="112" y="0" width="20.4" height="123" fill="lightblue" stroke="black" stroke-width="1"/>
-            <text x="112.5" y="15" font-size="5">Номер 2</text>
-            <rect x="112" y="0" width="10.4" height="5" fill="none" stroke="red" stroke-width="1"/>
+            <!-- Номер 2 (3 м x 9 м + туалет/душ) -->
+            <rect x="103" y="0" width="19.4" height="90" fill="lightblue" stroke="black" stroke-width="1"/>
+            <text x="105" y="15">Номер 2</text>
+            <rect x="103" y="0" width="19.4" height="5" fill="none" stroke="red" stroke-width="1"/> <!-- Окно -->
+            <rect x="103" y="70" width="15" height="20" fill="lightpink" stroke="black" stroke-width="1"/> <!-- Туалет/Душ -->
+            <text x="105" y="80">Т/Д 2</text>
             
-            <!-- Лобби/Ресепшн -->
-            <rect x="73" y="34" width="49.4" height="99" fill="lightgreen" stroke="black" stroke-width="1"/>
-            <text x="75" y="45" font-size="5">Лобби/Ресепшн</text>
-            
-            <!-- Коридор (12,24 м x 1 м) -->
-            <rect x="0" y="123" width="122.4" height="10" fill="lightgray" stroke="black" stroke-width="1"/>
-            <text x="5" y="128" font-size="5">Коридор</text>
-        </svg>
-    </div>
-
-    <div class="floor-plan">
-        <h2>План типового этажа (2–5 этажи)</h2>
-        <svg width="200" height="150" xmlns="http://www.w3.org/2000/svg">
-            <!-- Основной контур здания -->
-            <rect x="0" y="0" width="122.4" height="133" fill="none" stroke="black" stroke-width="1"/>
-            
-            <!-- Лестничный блок -->
-            <rect x="0" y="0" width="73" height="34" fill="gray" stroke="black" stroke-width="1"/>
-            <text x="5" y="15" font-size="5">Лестница</text>
-            
-            <!-- Номер 3 -->
-            <rect x="0" y="0" width="20.4" height="123" fill="lightblue" stroke="black" stroke-width="1"/>
-            <text x="2" y="15" font-size="5">Номер 3</text>
-            <rect x="0" y="0" width="20.4" height="5" fill="none" stroke="red" stroke-width="1"/>
-            
-            <!-- Номер 4 -->
-            <rect x="20.4" y="0" width="20.4" height="123" fill="lightblue" stroke="black" stroke-width="1"/>
-            <text x="22.4" y="15" font-size="5">Номер 4</text>
-            <rect x="20.4" y="0" width="20.4" height="5" fill="none" stroke="red" stroke-width="1"/>
-            
-            <!-- Номер 5 -->
-            <rect x="40.8" y="0" width="20.4" height="123" fill="lightblue" stroke="black" stroke-width="1"/>
-            <text x="42.8" y="15" font-size="5">Номер 5</text>
-            <rect x="40.8" y="0" width="20.4" height="5" fill="none" stroke="red" stroke-width="1"/>
-            
-            <!-- Номер 6 -->
-            <rect x="61.2" y="0" width="20.4" height="123" fill="lightblue" stroke="black" stroke-width="1"/>
-            <text x="63.2" y="15" font-size="5">Номер 6</text>
-            <rect x="61.2" y="0" width="20.4" height="5" fill="none" stroke="red" stroke-width="1"/>
-            
-            <!-- Номер 7 -->
-            <rect x="81.6" y="0" width="20.4" height="123" fill="lightblue" stroke="black" stroke-width="1"/>
-            <text x="83.6" y="15" font-size="5">Номер 7</text>
-            <rect x="81.6" y="0" width="20.4" height="5" fill="none" stroke="red" stroke-width="1"/>
-            
-            <!-- Номер 8 -->
-            <rect x="102" y="0" width="20.4" height="123" fill="lightblue" stroke="black" stroke-width="1"/>
-            <text x="104" y="15" font-size="5">Номер 8</text>
-            <rect x="102" y="0" width="20.4" height="5" fill="none" stroke="red" stroke-width="1"/>
-            
-            <!-- Коридор -->
-            <rect x="0" y="123" width="122.4" height="10" fill="lightgray" stroke="black" stroke-width="1"/>
-            <text x="5" y="128" font-size="5">Коридор</text>
-        </svg>
-    </div>
-</body>
-</html>
+            <!-- Лобби/Ресепшн
